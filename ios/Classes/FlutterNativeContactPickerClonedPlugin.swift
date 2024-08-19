@@ -53,13 +53,13 @@ class MultiPickerHandler: PickerHandler {
 }
 
 
-public class SwiftFlutterNativeContactPickerPlugin: NSObject, FlutterPlugin , CNContactPickerDelegate{
+public class FlutterNativeContactPickerClonedPlugin: NSObject, FlutterPlugin , CNContactPickerDelegate{
 
 var _delegate: PickerHandler?;
 
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(name: "flutter_native_contact_picker_cloned", binaryMessenger: registrar.messenger())
-    let instance = SwiftFlutterNativeContactPickerPlugin()
+    let instance = FlutterNativeContactPickerClonedPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 
